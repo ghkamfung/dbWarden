@@ -4178,8 +4178,10 @@ BEGIN
 		[distribution cleanup agent] NVARCHAR(500),
 		[rpc server name] NVARCHAR(200),
 		[rpc login name] NVARCHAR(200),
-		publisher_type NVARCHAR(200)
-		)
+		publisher_type NVARCHAR(200),
+		[delete batch size xact] int,
+		[delete batch size cmd] int
+	)
 
 	INSERT INTO #REPLINFO
 	EXEC sp_helpdistributor
